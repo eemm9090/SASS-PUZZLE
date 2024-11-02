@@ -27,3 +27,29 @@ footer {
   height: 100px;
   width: 400px;
 }
+
+.main__list {
+  margin-top: 40px;
+  margin-left: 40px;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.main__list__box {
+  height: 40px;
+  width: 140px;
+  margin-bottom: 10px;
+  border: 5px solid	#ffffff ;
+}
+
+.purple {
+  background-color: #a9004b;
+}
+
+.orange {
+  background-color: #ff863f;
+}
+
+.blue {
+  background-color: #0000ff;
+}
