@@ -2,6 +2,29 @@ header {
   background-color: #141f40;
   height: 100px;
   width: 400px;
+  overflow: hidden;
+}
+
+.header__list__container {
+  display: flex;
+}
+
+.header__list {
+  background-color: #ffffff;
+  height: 60px;
+  width: 160px;
+  margin-top: 20px;
+  margin-left: 220px;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.header__list__box {
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+  margin-left: 10px;
+  float: left;
 }
 
 main {
@@ -22,12 +45,6 @@ main {
   float: left;
 }
 
-footer {
-  background-color: #d98d30;
-  height: 100px;
-  width: 400px;
-}
-
 .main__list {
   margin-top: 40px;
   margin-left: 40px;
@@ -39,7 +56,7 @@ footer {
   height: 40px;
   width: 140px;
   margin-bottom: 10px;
-  border: 5px solid	#ffffff ;
+  border: 5px solid	#ffffff;
 }
 
 .purple {
@@ -52,4 +69,10 @@ footer {
 
 .blue {
   background-color: #0000ff;
+}
+
+footer {
+  background-color: #d98d30;
+  height: 100px;
+  width: 400px;
 }
