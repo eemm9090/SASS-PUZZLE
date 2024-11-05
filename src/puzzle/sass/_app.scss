@@ -1,0 +1,75 @@
+@use 'variable' as ver;
+@use 'mixin' as mix;
+
+.header {
+  background-color: ver.$navy;
+  height: 100px;
+  width: 400px;
+  overflow: hidden;
+
+  &__list {
+    display: flex;
+
+    &__container {
+      background-color: ver.$white;
+      height: 60px;
+      width: 160px;
+      margin-top: 20px;
+      margin-left: 220px;
+      list-style: none;
+      padding-left: 0px;
+
+      &__box {
+        @include mix.header-btn();
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+}
+
+.sidebar {
+  background-color: ver.$green;
+  height: 250px;
+  width: 150px;
+  float: left;
+}
+
+.main {
+  background-color: ver.$red;
+  height: 250px;
+  width: 250px;
+  float: left;
+}
+
+.main__list {
+  &__container {
+    margin-top: 40px;
+    margin-left: 40px;
+    list-style: none;
+    padding-left: 0px;
+
+    &__box {
+      @include mix.main-btn();;
+    }
+  }
+}
+
+ol {
+  > li {
+    @each $btnColor in ver.$classNames {
+      $index: index(ver.$classNames, $btnColor);
+      &.#{$btnColor} {
+        background-color: nth(ver.$buttonColor, $index);
+      }
+    }
+  }
+}
+
+footer {
+  background-color:	ver.$brown;
+  height: 100px;
+  width: 400px;
+}
