@@ -1,0 +1,16 @@
+@use 'variable' as ver;
+
+@mixin header-btn() {
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+  margin-left: 10px;
+  float: left;
+}
+
+@mixin main-btn() {
+  height: 40px;
+  width: 140px;
+  margin-bottom: 10px;
+  border: 5px solid	ver.$white;
+}
