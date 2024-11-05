@@ -3,26 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./sass/style.scss">
   <title>Sass puzzle</title>
 </head>
 <body>
-  <header>
-    <div class="header__list__container">
-      <ol class="header__list">
-        <li class="header__list__box purple"></li>
-        <li class="header__list__box orange"></li>
-        <li class="header__list__box blue"></li>
+  <header class="header">
+    <div class="header__list">
+      <ol class="header__list__container">
+        <li class="header__list__container__box purple"></li>
+        <li class="header__list__container__box orange"></li>
+        <li class="header__list__container__box blue"></li>
       </ol>
     </div>
   </header>
   <main>
     <div class="sidebar"></div>
     <div class="main">
-      <ol class="main__list">
-        <li class="main__list__box purple"></li>
-        <li class="main__list__box orange"></li>
-        <li class="main__list__box blue"></li>
-      </ol>
+      <div class="main__list">
+        <ol class="main__list__container">
+          <li class="main__list__container__box purple"></li>
+          <li class="main__list__container__box orange"></li>
+          <li class="main__list__container__box blue"></li>
+        </ol>
+      </div>
     </div>
   </main>
   <footer></footer>
