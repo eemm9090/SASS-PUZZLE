@@ -1,30 +1,29 @@
-header {
-  background-color: #141f40;
+@use 'variable' as ver;
+@use 'mixin' as mix;
+
+.header {
+  background-color: ver.$navy;
   height: 100px;
   width: 400px;
   overflow: hidden;
-}
 
-.header__list__container {
-  display: flex;
-}
+  &__list {
+    display: flex;
 
-.header__list {
-  background-color: #ffffff;
-  height: 60px;
-  width: 160px;
-  margin-top: 20px;
-  margin-left: 220px;
-  list-style: none;
-  padding-left: 0px;
-}
+    &__container {
+      background-color: ver.$white;
+      height: 60px;
+      width: 160px;
+      margin-top: 20px;
+      margin-left: 220px;
+      list-style: none;
+      padding-left: 0px;
 
-.header__list__box {
-  height: 40px;
-  width: 40px;
-  margin-top: 10px;
-  margin-left: 10px;
-  float: left;
+      &__box {
+        @include mix.header-btn();
+      }
+    }
+  }
 }
 
 main {
@@ -32,47 +31,45 @@ main {
 }
 
 .sidebar {
-  background-color:#80bfa8;
+  background-color: ver.$green;
   height: 250px;
   width: 150px;
   float: left;
 }
 
 .main {
-  background-color: #8c2727;
+  background-color: ver.$red;
   height: 250px;
   width: 250px;
   float: left;
 }
 
 .main__list {
-  margin-top: 40px;
-  margin-left: 40px;
-  list-style: none;
-  padding-left: 0px;
+  &__container {
+    margin-top: 40px;
+    margin-left: 40px;
+    list-style: none;
+    padding-left: 0px;
+
+    &__box {
+      @include mix.main-btn();;
+    }
+  }
 }
 
-.main__list__box {
-  height: 40px;
-  width: 140px;
-  margin-bottom: 10px;
-  border: 5px solid	#ffffff;
-}
-
-.purple {
-  background-color: #a9004b;
-}
-
-.orange {
-  background-color: #ff863f;
-}
-
-.blue {
-  background-color: #0000ff;
+ol {
+  > li {
+    @each $btnColor in ver.$classNames {
+      $index: index(ver.$classNames, $btnColor);
+      &.#{$btnColor} {
+        background-color: nth(ver.$buttonColor, $index);
+      }
+    }
+  }
 }
 
 footer {
-  background-color: #d98d30;
+  background-color:	ver.$brown;
   height: 100px;
   width: 400px;
 }
